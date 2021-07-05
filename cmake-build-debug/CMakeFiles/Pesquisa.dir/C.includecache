@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/coutinho/CLionProjects/ifg/estrutura2/mp2/Pesquisa/Pesquisa.h
+
+/Users/coutinho/CLionProjects/ifg/estrutura2/mp2/Pesquisa/main.c
+stdio.h
+-
+string.h
+-
+Pesquisa.h
+/Users/coutinho/CLionProjects/ifg/estrutura2/mp2/Pesquisa/Pesquisa.h
+
