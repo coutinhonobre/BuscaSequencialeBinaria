@@ -6,6 +6,16 @@
 
 #IncludeRegexTransform: 
 
+/Users/coutinho/CLionProjects/ifg/estrutura2/mp2/Pesquisa/Pesquisa.c
+printf.h
+-
+Pesquisa.h
+/Users/coutinho/CLionProjects/ifg/estrutura2/mp2/Pesquisa/Pesquisa.h
+stdio.h
+-
+string.h
+-
+
 /Users/coutinho/CLionProjects/ifg/estrutura2/mp2/Pesquisa/Pesquisa.h
 stdio.h
 -

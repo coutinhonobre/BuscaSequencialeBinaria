@@ -28,4 +28,5 @@ void Insere(TipoRegistro Reg, TipoTabela *T);
 TipoRegistro PesquisaSequencialPorPosicao(int indice, TipoTabela *T);
 TipoTabela RetirarItemPesquisaSequencial(TipoChave x , TipoTabela *T);
 TipoIndice PesquisaBinaria(TipoChave x , TipoTabela *T);
+int * busca(TipoTabela *vet, int n, TipoChave chave, int posicoes[]);
 void ListaTabela(TipoTabela *T);

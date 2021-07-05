@@ -24,6 +24,24 @@ TipoIndice PesquisaSequencial(TipoChave x , TipoTabela *T) {
     return i ;
 }
 
+int * busca(TipoTabela *vet, int n, TipoChave chave, int posicoes[]) {
+    int i, indice = 0;
+
+    vet->Item[0].Chave = chave;
+    i = vet->n + 1;
+
+    while (i > 0) {
+        if(vet->Item[i].Chave == chave) {
+            posicoes[indice] = i;
+            indice++;
+            n++;
+        }
+        i--;
+    }
+
+    return posicoes;
+}
+
 TipoRegistro PesquisaSequencialPorPosicao(int indice, TipoTabela *T) {
     return T->Item[indice];
 }

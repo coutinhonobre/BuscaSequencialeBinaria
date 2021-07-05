@@ -10,7 +10,7 @@ int main(int argc, char *argv[]) {
 
     Inicializa(&tabelaDeAlunos);
 
-    TipoRegistro a1, a2, a3, a4, a5;
+    TipoRegistro a1, a2, a3, a4, a5, a6;
 
     a1.Chave = 10; a1.Idade = 32; strcpy(a1.Nome, "Maria");
     Insere(a1, &tabelaDeAlunos);
@@ -20,6 +20,9 @@ int main(int argc, char *argv[]) {
 
     a3.Chave = 8; a3.Idade = 15; strcpy(a3.Nome, "Samara");
     Insere(a3, &tabelaDeAlunos);
+
+    a6.Chave = 10; a6.Idade = 32; strcpy(a6.Nome, "Maria");
+    Insere(a6, &tabelaDeAlunos);
 
     a4.Chave = 15; a4.Idade = 41; strcpy(a4.Nome, "Joao");
     Insere(a4, &tabelaDeAlunos);
@@ -58,8 +61,8 @@ int main(int argc, char *argv[]) {
         scanf("%d", &chaveDePesquisa);
 
         if (chaveDePesquisa != -1) {
-            //indice = PesquisaSequencial(chaveDePesquisa, &tabelaDeAlunos);
-            indice = PesquisaBinaria(0, &tabelaDeAlunos);
+            indice = PesquisaSequencial(chaveDePesquisa, &tabelaDeAlunos);
+            //indice = PesquisaBinaria(0, &tabelaDeAlunos);
 
             if (indice != 0) {
                 printf("\n------------------------------------\n");
