@@ -4,6 +4,8 @@
 
 #include <printf.h>
 #include "Pesquisa.h"
+#include <stdio.h>
+#include <string.h>
 
 void Inicializa (TipoTabela *T) {
     T->n = 0;
@@ -20,6 +22,42 @@ TipoIndice PesquisaSequencial(TipoChave x , TipoTabela *T) {
     } while (T->Item[i].Chave != x);
 
     return i ;
+}
+
+TipoRegistro PesquisaSequencialPorPosicao(int indice, TipoTabela *T) {
+    return T->Item[indice];
+}
+
+TipoTabela RetirarItemPesquisaSequencial(TipoChave x , TipoTabela *T) {
+
+    TipoTabela tabelaDeAlunos;
+    Inicializa(&tabelaDeAlunos);
+
+    for(int i=1; i<=T->n; i++) {
+        if (T->Item[i].Chave != x) {
+            TipoRegistro a;
+            a = T->Item[i];
+            Insere(a, &tabelaDeAlunos);
+        }
+    }
+
+    return tabelaDeAlunos;
+}
+
+int ordemCrescente(TipoTabela *T) {
+
+    for (int i = 1; i <=T->n; i++)
+    {
+        for (int j = i + 1; j <=T->n; j++)
+        {
+            if (T->Item[i].Chave > T->Item[j].Chave)
+            {
+                return 0;
+            }
+        }
+    }
+
+    return 1;
 }
 
 void Insere(TipoRegistro Reg, TipoTabela *T) {

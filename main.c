@@ -29,16 +29,37 @@ int main(int argc, char *argv[]) {
 
 
     insertionSort(&tabelaDeAlunos);
+    ListaTabela(&tabelaDeAlunos);
+//
+//    TipoRegistro tipoRegistro = PesquisaSequencialPorPosicao(1, &tabelaDeAlunos);
+//    printf("\n------------------------------------\n");
+//    printf("Registro Encontrado Por Pesquisa Sequencial Por Posição:\n");
+//    printf("Chave: %d\nNome: %s\nIdade: %d", tipoRegistro.Chave, tipoRegistro.Nome, tipoRegistro.Idade);
+//    printf("\n------------------------------------\n");
+//
+//    TipoTabela tabelaDeAlunosNovas = RetirarItemPesquisaSequencial(10, &tabelaDeAlunos);
+//    Inicializa(&tabelaDeAlunos);
+//    tabelaDeAlunos = tabelaDeAlunosNovas;
+//    ListaTabela(&tabelaDeAlunos);
+//
+//    printf("\n------------------------------------\n");
+//    printf("Remoção por Pesquisa Sequencial Por Posição:\n");
+//    ListaTabela(&tabelaDeAlunos);
+//    printf("\n------------------------------------\n");
+//
+//    printf("Ordem Crescente: %d\n", ordemCrescente(&tabelaDeAlunos));
+//    printf("\n------------------------------------\n");
+
 
     do {
 
-        ListaTabela(&tabelaDeAlunos);
+        //ListaTabela(&tabelaDeAlunos);
         printf("Digite a chave de pesquisa ou -1 para sair: ");
         scanf("%d", &chaveDePesquisa);
 
         if (chaveDePesquisa != -1) {
-            indice = PesquisaSequencial(chaveDePesquisa, &tabelaDeAlunos);
-            //indice = PesquisaBinaria(chaveDePesquisa, &tabelaDeAlunos);
+            //indice = PesquisaSequencial(chaveDePesquisa, &tabelaDeAlunos);
+            indice = PesquisaBinaria(0, &tabelaDeAlunos);
 
             if (indice != 0) {
                 printf("\n------------------------------------\n");
